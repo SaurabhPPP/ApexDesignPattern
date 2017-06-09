@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>School_Name__c</fullName>
+        <description>This is list of  All Government Board</description>
+        <externalId>false</externalId>
+        <label>School Name</label>
+        <picklist>
+            <picklistValues>
+                <fullName>State Board</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bihar Board</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jharkhand Board</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>National Institute of India</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DAV</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SSVM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bishop School</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>admission_date__c</fullName>
+        <externalId>false</externalId>
+        <label>admission date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>city__c</fullName>
+        <externalId>false</externalId>
+        <label>city</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ext_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>ext Id</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>name__c</fullName>
+        <externalId>false</externalId>
+        <label>name</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>student</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>student-{0000}</displayFormat>
+        <label>student id</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>students</pluralLabel>
+    <recordTypes>
+        <fullName>Government_Student</fullName>
+        <active>true</active>
+        <description>this record for government school student</description>
+        <label>Government Student</label>
+        <picklistValues>
+            <picklist>School_Name__c</picklist>
+            <values>
+                <fullName>Bihar Board</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jharkhand Board</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Institute of India</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State Board</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Private_Student</fullName>
+        <active>true</active>
+        <description>Record for private school student</description>
+        <label>Private Student</label>
+        <picklistValues>
+            <picklist>School_Name__c</picklist>
+            <values>
+                <fullName>Bishop School</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DAV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SSVM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State Board</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>share_to_nitesh</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>share to nitesh</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/apex.js&quot;)}
+
+
+var conf= confirm(&quot;want to share with nitesh&quot;);
+if(conf==true)
+{
+alert(&quot;in block&quot;);
+ var res1=sforce.apex.execute(&quot;partnerSavingStudent&quot;,&quot;updatestudent&quot;,{localId:&quot;{!student__c.Id}&quot;});
+
+alert(&quot;sharing completed&quot;);
+window.location.reload();
+}</url>
+    </webLinks>
+</CustomObject>

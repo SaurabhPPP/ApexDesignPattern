@@ -1,0 +1,37 @@
+<apex:page controller="DecoratorController">
+
+<apex:form id="theForm">
+    <apex:pageBlock id="pageBlock">
+     <apex:pageMessages ></apex:pageMessages>
+      <apex:pageBlockTable value="{!listOfMerchandise}" var="Merchandise">
+        <apex:column value="{!Merchandise.Merchandise.name}"/>
+        <apex:column headerValue="Price(Rs)">
+          
+          <apex:actionRegion >
+            <apex:inputText value="{!Merchandise.priceInRs}">
+              <apex:actionSupport event="onchange"
+                      reRender="pageBlock"/>
+            </apex:inputText>
+          </apex:actionRegion>
+        </apex:column>
+        
+        <apex:column headerValue="Prv Price(Rs)">
+          
+          
+            <apex:OutputText value="{!Merchandise.previousValue }">
+            </apex:OutputText>
+          
+        </apex:column>
+        <apex:column headerValue="Price($)"
+              value="{!Merchandise.Merchandise.price__c}"
+              id="tempInF"/>
+              
+              
+       
+      </apex:pageBlockTable>
+      <apex:actionRegion >
+      <apex:commandButton action="{!saveIt}" value="Save" title="Save" reRender="pageBlock"/>       
+      </apex:actionRegion>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>
